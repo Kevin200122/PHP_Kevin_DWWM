@@ -17,6 +17,24 @@ body {
 
 }
 
+#navbarTogglerDemo2 {
+    background-color: black;
+    display: block;
+    height: 60px;
+}
+
+#UnAccueil {
+    color: white;
+}
+
+#Catalogue {
+    color: white;
+}
+
+#LePanier {
+    color: white;
+}
+
 #Connexion {
     position: relative;
     display: block;
@@ -58,7 +76,9 @@ h1 {
     font-size: 4em;
 }
 
-h2 {}
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
 
 .vedette {
 
@@ -93,4 +113,8 @@ h2 {}
 .TextProduit {
     color: white;
     font-size: 30px;
+}
+
+#LesBoutons {
+    background-color: lightgreen;
 }
