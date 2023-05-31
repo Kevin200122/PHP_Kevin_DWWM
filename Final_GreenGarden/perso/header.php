@@ -29,6 +29,14 @@
 <li class="nav-item">
 <a class="nav-link" href="catalogue.php" id="Catalogue">Catalogue</a>
 </li>
+<li class="nav-item">
+  <a class="nav-link" href="Formulaire_Ticket_SAV.php" id="Formulaire_du_Ticket">Espace SAV</a>
+</li class="nav-item">
+<a class="nav-link" href="Espace_Commerciaux.php" id="Un_Espace_Commerciaux"> Espace Commerciaux</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="Client.php" id="Le_Client">Client</a>
+</li>
 <?php 
 
 

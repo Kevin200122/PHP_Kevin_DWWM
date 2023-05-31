@@ -1,6 +1,6 @@
 body {
     background-color: rgb(20, 150, 107);
-    font-family: 'Pacifico', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .nav-link {
@@ -26,19 +26,43 @@ body {
 #UnAccueil {
     color: white;
 }
+#UnAccueil:hover{
+    color:yellow;
+}
 
 #Catalogue {
     color: white;
+}
+#Catalogue:hover{
+    color:lightgreen;
 }
 
 #LePanier {
     color: white;
 }
+#LePanier:hover{
+    color:orange;
+}
+#Formulaire_du_Ticket{
+    color:white;
+}
+#Formulaire_du_Ticket:hover{
+    color:lightseagreen;
+}
+#Formulaire_Ticket{
+    color:white;
+    position: relative;
+    display:block;
+    height:220px;
+    width:400px;
+    left:700px;
+    background-color: brown;
+}
 
 #Connexion {
     position: relative;
     display: block;
-    height: 230px;
+    height: 250px;
     width: 230px;
     margin-left: 805px;
     background-color: brown;
@@ -47,7 +71,7 @@ body {
 #UneInscription {
     position: relative;
     display: block;
-    height: 230px;
+    height: 250px;
     width: 230px;
     margin-left: 805px;
     background-color: brown;
@@ -117,4 +141,24 @@ h2 {
 
 #LesBoutons {
     background-color: lightgreen;
+}
+
+#ticket{
+    background-color: cyan;
+}
+#Un_Espace_Commerciaux{
+    color:white;
+}
+#Un_Espace_Commerciaux:hover{
+    color:red;
+}
+#Le_Client{
+    color:white;
+}
+#Le_Client:hover{
+    color:beige;
+}
+#Retour_Connexion{
+  font-style: italic;
+    
 }

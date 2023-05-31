@@ -69,7 +69,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php if (isset($error_message)) : ?>
 	<p><?php echo $error_message; ?></p>
 	<?php endif; ?>
+
 	<form method="POST" id="UneInscription">
+	<label for="Type_utilisateurs">Vous êtes un:</label>
+
+<select name="Utilisateur" id="Un_Utilisateur">
+    <option value="">Choisir une option:</option>
+    <option value="dog">SAV</option>
+    <option value="cat">Commercial</option>
+    <option value="hamster">Client</option>
+</select>
 	<label for="login">Votre Login :</label>
 	<input type="login" id="login" name="login" required><br><br>
 	<label for="password">Mot de passe :</label>
@@ -77,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<input type="submit" value="S'inscrire">
 	
 	</form>
-	<p>Déjà inscrit ? <a href="login.php">Se connecter</a></p>
+	<p>Déjà inscrit ? <a href="login.php" id="Retour_Connexion">Se connecter</a></p>
 	</body>
 	
 	</html>

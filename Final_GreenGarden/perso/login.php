@@ -72,6 +72,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php endif; ?>
     
     <form method="POST" id="Connexion">
+    <label for="Type_utilisateurs">Vous êtes un:</label>
+
+<select name="Utilisateur" id="Un_Utilisateur">
+    <option value="">Choisir une option:</option>
+    <option value="dog">SAV</option>
+    <option value="cat">Commercial</option>
+    <option value="hamster">Client</option>
+</select>
     <label for="login">Votre login :</label>
     <input type="login" id="login" name="login" required> <br /><br />
     <label for="password">Votre password :</label>
