@@ -83,6 +83,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	<input type="login" id="login" name="login" required><br><br>
 	<label for="password">Mot de passe :</label>
 	<input type="password" id="password" name="password" required><br><br>
+	<label for="Email">Votre Email:</label>
+	<input type="Email" id="UnEmail" required><br><br>
 	<input type="submit" value="S'inscrire">
 	
 	</form>

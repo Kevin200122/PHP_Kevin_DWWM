@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
     <footer>
         <p>Green Garden - Tous droits réservés</p>
-        <div>Ce site a été réalisé par PHILIPPE Séverine</div>
+        <div>Ce site a été réalisé par un développeur web</div>
     </footer>
 </body>
     

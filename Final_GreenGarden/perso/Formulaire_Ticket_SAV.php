@@ -27,10 +27,11 @@ try {
     <input type="text" id="Numero_de_commande" ><br /><br />
    <label for ="text" >Description:</label>
    <input type="text" id="Une_description"><br><br>
-   <label for="text">Type de Ticket:</label>
-      <select name="Type_de_Ticket" id="Ticket">
-        <option value="Ticket_simple">Ticket simple</option>
-        <option value="Ticket_SAV">Ticket SAV</option>
+   <label for="text">Type de ticket:</label>
+   <select>
+     <option value="">Valider</option>
+     <option value=""> Annuler</option>
+     <option value="">Supprimer</option>
        
       </select><br /><br />
    
