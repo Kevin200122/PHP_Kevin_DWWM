@@ -1,10 +1,10 @@
 <?php
- include 'header.php';
+include 'header.php';
 // peut mettre <?= à la place de <?php
 
 ?>
-  
-  <?php
+
+<?php
 // peut mettre <?= à la place de <?php
 
 
@@ -29,45 +29,52 @@ try {
 <?php
 function ajouter($Photo, $Prix_Achat, $Nom_cours, $Nom_Long)
 {
+    
     $req = $access->prepare("INSERT INTO Produit (photo, Prix_Achat, Nom_cours, Nom_Long) VALUES ($Photo, $Prix_Achat, $Nom_cours, $Nom_Long)");
-
+    
     $req->execute(array($Photo, $Nom_cours, $Nom_Long, $Prix_Achat));
-
+    
     $req->closeCursor();
+    
 }
 
 function afficher()
 {
     $req=$access->prepare("SELECT * FROM Produit ORDER BY id DESC");
-
+    
     $req->execute();
 }
 
 function supprimer($Id)
 {
     $req=$access->prepare("DELETE FROM Produit WHERE id=?");
-
+    
     $req->execute(array($id));
 }
 
 ?>
+<html>
+<head>
 
+</head>
+<body>
 <h1>Commande:</h1><br>
-    <form method="post" enctype="multipart/form-data">
-        
+<form method="post" enctype="multipart/form-data">
+
 <br>
-        <div>
+<div>
 
 <label for="commande">Num Commande:</label>
 
-        <input type="text" id="CommandeClient">
+<input type="text" id="CommandeClient">
 
-    </div><br /><br />
-        <button type="submit">Afficher commande</button>
-    </form>
-    <footer>
-        <p>Green Garden - Tous droits réservés</p>
-        <div>Ce site a été réalisé par un développeur</div>
-    </footer>
+</div><br /><br />
+<button type="submit">Afficher commande</button>
+</form>
+<footer>
+<p>Green Garden - Tous droits réservés</p>
+<div>Ce site a été réalisé par un développeur</div>
+</footer>
 </body>
+</html>
 <?php include 'footer.php'; ?>  

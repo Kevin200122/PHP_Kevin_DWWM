@@ -26,36 +26,42 @@ body {
 #UnAccueil {
     color: white;
 }
-#UnAccueil:hover{
-    color:yellow;
+
+#UnAccueil:hover {
+    color: yellow;
 }
 
 #Catalogue {
     color: white;
 }
-#Catalogue:hover{
-    color:lightgreen;
+
+#Catalogue:hover {
+    color: lightgreen;
 }
 
 #LePanier {
     color: white;
 }
-#LePanier:hover{
-    color:orange;
+
+#LePanier:hover {
+    color: orange;
 }
-#Formulaire_du_Ticket{
-    color:white;
+
+#Formulaire_du_Ticket {
+    color: white;
 }
-#Formulaire_du_Ticket:hover{
-    color:lightseagreen;
+
+#Formulaire_du_Ticket:hover {
+    color: lightseagreen;
 }
-#Formulaire_Ticket{
-    color:white;
+
+#Formulaire_Ticket {
+    color: white;
     position: relative;
-    display:block;
-    height:220px;
-    width:400px;
-    left:700px;
+    display: block;
+    height: 250px;
+    width: 400px;
+    left: 700px;
     background-color: brown;
 }
 
@@ -143,22 +149,27 @@ h2 {
     background-color: lightgreen;
 }
 
-#ticket{
+#ticket {
     background-color: cyan;
 }
-#Un_Espace_Commerciaux{
-    color:white;
+
+#Un_Espace_Commerciaux {
+    color: white;
 }
-#Un_Espace_Commerciaux:hover{
-    color:red;
+
+#Un_Espace_Commerciaux:hover {
+    color: red;
 }
-#Le_Client{
-    color:white;
+
+#Le_Client {
+    color: white;
 }
-#Le_Client:hover{
-    color:beige;
+
+#Le_Client:hover {
+    color: beige;
 }
-#Retour_Connexion{
-  font-style: italic;
-    
+
+#Retour_Connexion {
+    font-style: italic;
+
 }

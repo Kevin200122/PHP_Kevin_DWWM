@@ -19,44 +19,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Vérification si le formulaire a été soumis
     if (
         isset($_POST['Id_TICKET']) && isset($_POST['liste_Ticket'])) {
-
-        $liste_Ticket = escape_string($_POST['liste_Ticket']);
-        $cat_parent = $_POST['Id_Ticket'];
-
-        if ($cat_parent!=""){
-            $stmt = $conn->prepare("SELECT COUNT(*) AS total from liste_Ticket");
-            $stmt->bindValue(':libc', $liste_Ticket);
-            $stmt->execute();
-            $liste =  $stmt->fetch(PDO::FETCH_ASSOC);
-            $totalcat=$liste['total'];
-
-            if ($totalcat<1){
-            try {
-                $stmt = $conn->prepare("INSERT INTO t_d_categorie (Libelle, Id_Categorie_Parent)
-					 VALUES (:libc, :catparent)");
-                $stmt->bindValue(':libc', $nom_categorie);
-                $stmt->bindValue(':catparent',  $cat_parent);
+            
+            $liste_Ticket = escape_string($_POST['liste_Ticket']);
+            $cat_parent = $_POST['Id_Ticket'];
+            
+            if ($cat_parent!=""){
+                $stmt = $conn->prepare("SELECT COUNT(*) AS total from liste_Ticket");
+                $stmt->bindValue(':libc', $liste_Ticket);
                 $stmt->execute();
-                $categorie_id = $conn->lastInsertId();
-            } catch (PDOException $e) {
-                echo "Erreur: " . $e->getMessage();
-                exit();
-            }
+                $liste =  $stmt->fetch(PDO::FETCH_ASSOC);
+                $totalcat=$liste['total'];
+                
+                if ($totalcat<1){
+                    try {
+                        $stmt = $conn->prepare("INSERT INTO t_d_Ticket (Libelle, Id_Ticket)
+                        VALUES (:libc, :catparent)");
+                        $stmt->bindValue(':libc', $liste_Ticket);
+                        $stmt->bindValue(':catparent',  $cat_parent);
+                        $stmt->execute();
+                        $Ticket_id = $conn->lastInsertId();
+                    } catch (PDOException $e) {
+                        echo "Erreur: " . $e->getMessage();
+                        exit();
+                    }
+                }
+                else{
+                    echo 'Votre ticket ici:';
+                }
             }
             else{
-                echo 'Catégorie déjà existante';
-           }
-        }
-        else{
-            $stmt = $conn->prepare("INSERT INTO t_d_categorie (Libelle)
-					 VALUES (:libc)");
-                $stmt->bindValue(':libc', $nom_categorie);
+                $stmt = $conn->prepare("INSERT INTO t_d_Ticket (Libelle)
+                VALUES (:libc)");
+                $stmt->bindValue(':libc', $liste_Ticket);
                 $stmt->execute();
-                $categorie_id = $conn->lastInsertId();
-
+                $Ticket_id = $conn->lastInsertId();
+                
+            }
         }
     }
-    }
-?>
-
-<h3>Vos tickets ici:</h3>
+    ?>
+    <html>
+    <head>
+    
+    </head>
+    <body>
+    <h3>Vos tickets ici:</h3>
+    </body>
+    </html>
